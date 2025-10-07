@@ -1,0 +1,397 @@
+{
+  "media": {
+    "filename": "Media/S3/frspa/GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2.mp4",
+    "duration_msec": 5664992,
+    "headends": [
+      {
+        "status": "waiting",
+        "hid": 1,
+        "hcode": "tvapt_001",
+        "hname": null
+      }
+    ],
+    "priority": 0,
+    "last_scheduled_at": "2025-03-28T21:00:00.000-03:00",
+    "subtitles": [],
+    "size": 14132976641,
+    "processed_size": 9496815300,
+    "manual_qc": {},
+    "parent_feed": 1,
+    "feeds": [
+      {
+        "name": "Adrenalina Pura TV Halloween",
+        "code": "tvapt",
+        "id": 1,
+        "asset_present": true,
+        "can_map": true,
+        "error": null,
+        "parent_feed": true
+      },
+      {
+        "name": "Adrenalina Pura TV POR",
+        "code": "fzpor",
+        "id": 2,
+        "asset_present": false,
+        "can_map": true,
+        "error": null,
+        "parent_feed": false
+      },
+      {
+        "name": "Adrenalina Pura TV Spanish",
+        "code": "frspa",
+        "id": 3,
+        "asset_present": true,
+        "can_map": true,
+        "error": null,
+        "parent_feed": false
+      },
+      {
+        "name": "Filmelier Portuguese",
+        "code": "flmpor",
+        "id": 4,
+        "asset_present": false,
+        "can_map": true,
+        "error": null,
+        "parent_feed": false
+      },
+      {
+        "name": "Filmelier Spanish",
+        "code": "flmspa",
+        "id": 5,
+        "asset_present": true,
+        "can_map": true,
+        "error": null,
+        "parent_feed": false
+      },
+      {
+        "name": "Turma da Monica Portuguese",
+        "code": "tdmpor",
+        "id": 6,
+        "asset_present": false,
+        "can_map": true,
+        "error": null,
+        "parent_feed": false
+      },
+      {
+        "name": " Filmelier TV Esperança",
+        "code": "espca",
+        "id": 7,
+        "asset_present": false,
+        "can_map": true,
+        "error": null,
+        "parent_feed": false
+      },
+      {
+        "name": "Filmelier TV  Esperanza",
+        "code": "espza",
+        "id": 8,
+        "asset_present": false,
+        "can_map": true,
+        "error": null,
+        "parent_feed": false
+      },
+      {
+        "name": " Filmelier TV  Pasión",
+        "code": "pasion",
+        "id": 9,
+        "asset_present": false,
+        "can_map": true,
+        "error": null,
+        "parent_feed": false
+      }
+    ],
+    "audio": [
+      {
+        "codec": "aac",
+        "language": "ENG",
+        "loudness": -23.1,
+        "mapping": "1,2",
+        "pid": 1,
+        "asset_id": "GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2",
+        "source": "GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2.mp4",
+        "embedded_audio": true,
+        "processed_size": 9496815300,
+        "state": "qc_failed",
+        "code_to_lang": "English",
+        "channels": 2,
+        "headends": [
+          {
+            "status": "waiting",
+            "hid": 1,
+            "hcode": "tvapt_001",
+            "hname": null
+          }
+        ],
+        "error": "Freeze frames found in segments; Silence check failed for GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2: track id 2068"
+      }
+    ],
+    "video": {
+      "pid": 2064,
+      "codec": "h264",
+      "encoding": "NTSC",
+      "fps": 29.97,
+      "aspect_ratio": "16:9",
+      "profile": "High",
+      "scan_type": "progressive",
+      "field_order": "",
+      "bitrate": 13109304,
+      "duration": 5665.014
+    },
+    "user_options": {},
+    "disable_full_preview": true,
+    "full_preview_status": "yes",
+    "qc": {
+      "status": {
+        "freeze": true,
+        "silence": true,
+        "loudness": false,
+        "black_frames": true
+      },
+      "feed_status": {
+        "freeze": true,
+        "silence": true,
+        "loudness": false,
+        "black_frames": true
+      },
+      "data": {
+        "duration": {
+          "threshold": 0,
+          "failed": {}
+        },
+        "freeze": {
+          "threshold": 10,
+          "failed": [
+            {
+              "segment_id": 10,
+              "offset": 4806.63525,
+              "duration": 15.52
+            }
+          ]
+        },
+        "black_frames": {
+          "threshold": 20,
+          "failed": []
+        },
+        "silence": {
+          "threshold": 15,
+          "failed": [
+            {
+              "segment_id": 1,
+              "offset": 30.117,
+              "duration": 17.95,
+              "track_pid": 2068,
+              "asset_id": "GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2"
+            },
+            {
+              "segment_id": 6,
+              "offset": 2489.16,
+              "duration": 27.43,
+              "track_pid": 2068,
+              "asset_id": "GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2"
+            }
+          ]
+        },
+        "loudness": {
+          "threshold": null,
+          "failed": []
+        }
+      }
+    },
+    "segments": [
+      {
+        "segment_id": 1,
+        "default_segment": false,
+        "segment_offset": 0,
+        "duration": 11752,
+        "segment_offset_tc": "00:00:00:00",
+        "duration_tc": "00:06:32:04",
+        "som": "00:00:00:00",
+        "eom": "00:06:32:04",
+        "type": ""
+      },
+      {
+        "segment_id": 2,
+        "default_segment": false,
+        "segment_offset": 11752,
+        "duration": 11161,
+        "segment_offset_tc": "00:06:32:04",
+        "duration_tc": "00:06:12:12",
+        "som": "00:06:32:04",
+        "eom": "00:12:44:16",
+        "type": ""
+      },
+      {
+        "segment_id": 3,
+        "default_segment": false,
+        "segment_offset": 22913,
+        "duration": 12916,
+        "segment_offset_tc": "00:12:44:16",
+        "duration_tc": "00:07:10:29",
+        "som": "00:12:44:16",
+        "eom": "00:19:55:15",
+        "type": ""
+      },
+      {
+        "segment_id": 4,
+        "default_segment": false,
+        "segment_offset": 35829,
+        "duration": 14609,
+        "segment_offset_tc": "00:19:55:15",
+        "duration_tc": "00:08:07:14",
+        "som": "00:19:55:15",
+        "eom": "00:28:02:28",
+        "type": ""
+      },
+      {
+        "segment_id": 5,
+        "default_segment": false,
+        "segment_offset": 50439,
+        "duration": 15805,
+        "segment_offset_tc": "00:28:02:29",
+        "duration_tc": "00:08:47:11",
+        "som": "00:28:02:29",
+        "eom": "00:36:50:10",
+        "type": ""
+      },
+      {
+        "segment_id": 6,
+        "default_segment": false,
+        "segment_offset": 66244,
+        "duration": 22925,
+        "segment_offset_tc": "00:36:50:10",
+        "duration_tc": "00:12:44:28",
+        "som": "00:36:50:10",
+        "eom": "00:49:35:08",
+        "type": ""
+      },
+      {
+        "segment_id": 7,
+        "default_segment": false,
+        "segment_offset": 89169,
+        "duration": 11011,
+        "segment_offset_tc": "00:49:35:08",
+        "duration_tc": "00:06:07:12",
+        "som": "00:49:35:08",
+        "eom": "00:55:42:20",
+        "type": ""
+      },
+      {
+        "segment_id": 8,
+        "default_segment": false,
+        "segment_offset": 100180,
+        "duration": 21847,
+        "segment_offset_tc": "00:55:42:20",
+        "duration_tc": "00:12:08:29",
+        "som": "00:55:42:20",
+        "eom": "01:07:51:19",
+        "type": ""
+      },
+      {
+        "segment_id": 9,
+        "default_segment": false,
+        "segment_offset": 122027,
+        "duration": 15605,
+        "segment_offset_tc": "01:07:51:19",
+        "duration_tc": "00:08:40:21",
+        "som": "01:07:51:19",
+        "eom": "01:16:32:10",
+        "type": ""
+      },
+      {
+        "segment_id": 10,
+        "default_segment": false,
+        "segment_offset": 137632,
+        "duration": 11088,
+        "segment_offset_tc": "01:16:32:10",
+        "duration_tc": "00:06:09:29",
+        "som": "01:16:32:10",
+        "eom": "01:22:42:09",
+        "type": ""
+      },
+      {
+        "segment_id": 11,
+        "default_segment": false,
+        "segment_offset": 148720,
+        "duration": 14187,
+        "segment_offset_tc": "01:22:42:09",
+        "duration_tc": "00:07:53:11",
+        "som": "01:22:42:09",
+        "eom": "01:30:35:20",
+        "type": ""
+      },
+      {
+        "segment_id": 12,
+        "default_segment": false,
+        "segment_offset": 162907,
+        "duration": 6873,
+        "segment_offset_tc": "01:30:35:20",
+        "duration_tc": "00:03:49:10",
+        "som": "01:30:35:20",
+        "eom": "01:34:25:00",
+        "type": ""
+      }
+    ],
+    "uploaded_start": "2025-02-04T13:05:57.720Z",
+    "uploaded_by": "supportsofa",
+    "uploaded_in": 1,
+    "upload_speed": 107826.055,
+    "processed_in": 3329.822789362,
+    "interlaced": false,
+    "tc_in": "00:00:00:00",
+    "md5sum": "51533755144d5e9d45089d76c6c6ff29",
+    "processed_md5sum": "b90407ab219d7e76475f2a464e72a0ef",
+    "metadata": {
+      "title": "Gonjiam: psiquiatrico maldito",
+      "description": "El equipo de una serie web de terror viaja a uno de los lugares más aterradores del mundo.",
+      "long_description": "El equipo de una serie web de terror viaja a uno de los lugares más aterradores del mundo, un asilo abandonado en Corea, para una transmisión en vivo. Pronto los rumores y todas las historias espeluznantes que escucharon comienzan a tener sentido.",
+      "guid": "GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511",
+      "ratings": {
+        "rating": {
+          "rating_body": "RTC",
+          "rating_value": "B-15"
+        }
+      },
+      "genre": "Horror,Independent"
+    },
+    "created_at": "2025-01-22T10:32:00.593Z",
+    "uploaded_at": "2025-02-04T13:05:57.720Z",
+    "updated_at": "2025-04-13T16:14:48.589Z",
+    "asset_id": "GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2",
+    "id": 26,
+    "type": "movie",
+    "asset_type": "Video",
+    "category": "media",
+    "title": "Gonjiam: psiquiatrico maldito",
+    "state": "qc_failed",
+    "ready_to_air": false,
+    "duration": 169780,
+    "resolution": "1920x1080",
+    "video_bit_rate": 13411,
+    "processed_filename": "Media/Processed/GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2.ts",
+    "feed_priorities": [
+      {
+        "feed_id": 1,
+        "priority": 0
+      },
+      {
+        "feed_id": 3,
+        "priority": 0
+      },
+      {
+        "feed_id": 5,
+        "priority": 0
+      }
+    ],
+    "preview_image": "https://preview-amagicloud-sofa-automation-sofa.cloudport.amagi.tv/media/sofa/GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2/51533755144d5e9d45089d76c6c6ff29/thumbnail/GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2_%s.png",
+    "preview_video_only": "https://preview-amagicloud-sofa-automation-sofa.cloudport.amagi.tv/media/sofa/GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2/51533755144d5e9d45089d76c6c6ff29/video_preview/full_length_preview/vid.m3u8",
+    "preview_video": "https://sofa.cloudport.amagi.tv/v1/api/media/26/master-preview.m3u8?account_id=1",
+    "generated": false,
+    "validation": true,
+    "frame_frequency": 29.97002997002997,
+    "dynamic": false,
+    "preroll": null,
+    "error": "Freeze frames found in segments; Silence check failed for GONJIAMHAUNTEDASYLUM_SOFA_20190416_2511-FTR_DUB_es-419_V2: track id 2068"
+  },
+  "playout_url": "https://sofa.cloudport.amagi.tv",
+  "playout_token": "X7hix6WcDjLyswQxyQrK"
+}

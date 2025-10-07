@@ -1,0 +1,29 @@
+{
+  "types": [
+    {
+      "category": "media",
+      "values": [
+        "movie",
+        "trailer",
+        "media",
+        "ad",
+        "bumper"
+      ]
+    },
+    {
+      "category": "graphics",
+      "values": [
+        "graphic"
+      ]
+    },
+    {
+      "category": "rescue",
+      "values": [
+        "live_rescue",
+        "breakout_wheel",
+        "playout_rescue",
+        "scheduled_rescue"
+      ]
+    }
+  ]
+}

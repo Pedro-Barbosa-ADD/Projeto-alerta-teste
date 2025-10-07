@@ -1,0 +1,187 @@
+{
+  "media": {
+      "filename": "DEV/PROXY/NWR_MeetDave_Th_pt.mp4",
+      "duration_msec": 6076000,
+      "subtitles": [],
+      "size": 0,
+      "processed_size": 0,
+      "parent_feed": 1,
+      "audio": [
+          {
+              "codec": "PCM, 16-Bit Little-Endian Signed Integer",
+              "language": "ORG",
+              "loudness": -24,
+              "mapping": "1,2",
+              "pid": 1,
+              "asset_id": "NWR_MeetDave_Th_pt",
+              "source": "D:\\SAMSUNG DEV\\1. INGEST VIDEO\\NWR_MeetDave_Th_pt.mxf",
+              "embedded_audio": true,
+              "processed_size": 0,
+              "state": "uploaded",
+              "code_to_lang": "Original Track",
+              "channels": "1",
+              "error": ""
+          }
+      ],
+      "video": {
+          "pid": 2064,
+          "codec": "XDCAM HD422, 1080i60",
+          "encoding": "NTSC",
+          "fps": 29.97,
+          "aspect_ratio": "16:9",
+          "profile": "High",
+          "scan_type": "progressive",
+          "field_order": "",
+          "bitrate": "50000000",
+          "duration": 5400
+      },
+      "disable_full_preview": true,
+      "full_preview_status": "yes",
+      "cuePoints": {
+          "black": [
+              {
+                  "segment_id": 1,
+                  "segment_offset": 15647,
+                  "segment_offset_sec": 522.109284,
+                  "segment_offset_tc": "00:08:41:18"
+              },
+              {
+                  "segment_id": 2,
+                  "segment_offset": 28331,
+                  "segment_offset_sec": 945.314115,
+                  "segment_offset_tc": "00:15:44:12"
+              },
+              {
+                  "segment_id": 3,
+                  "segment_offset": 40530,
+                  "segment_offset_sec": 1352.3539,
+                  "segment_offset_tc": "00:22:31:01"
+              },
+              {
+                  "segment_id": 4,
+                  "segment_offset": 51628,
+                  "segment_offset_sec": 1722.674943,
+                  "segment_offset_tc": "00:28:40:29"
+              },
+              {
+                  "segment_id": 5,
+                  "segment_offset": 65575,
+                  "segment_offset_sec": 2188.022087,
+                  "segment_offset_tc": "00:36:25:25"
+              },
+              {
+                  "segment_id": 6,
+                  "segment_offset": 74290,
+                  "segment_offset_sec": 2478.830888,
+                  "segment_offset_tc": "00:41:16:11"
+              },
+              {
+                  "segment_id": 7,
+                  "segment_offset": 94242,
+                  "segment_offset_sec": 3144.557617,
+                  "segment_offset_tc": "00:52:21:13"
+              },
+              {
+                  "segment_id": 8,
+                  "segment_offset": 107440,
+                  "segment_offset_sec": 3584.938513,
+                  "segment_offset_tc": "00:59:41:11"
+              },
+              {
+                  "segment_id": 9,
+                  "segment_offset": 115126,
+                  "segment_offset_sec": 3841.386261,
+                  "segment_offset_tc": "01:03:57:16"
+              },
+              {
+                  "segment_id": 10,
+                  "segment_offset": 133141,
+                  "segment_offset_sec": 4442.507509,
+                  "segment_offset_tc": "01:13:58:02"
+              },
+              {
+                  "segment_id": 11,
+                  "segment_offset": 141212,
+                  "segment_offset_sec": 4711.800038,
+                  "segment_offset_tc": "01:18:27:03"
+              }
+          ],
+          "credits": {
+              "startTime": {
+                  "segment_offset": 160619,
+                  "segment_offset_sec": 5359.34562,
+                  "segment_offset_tc": "01:29:14:00"
+              },
+              "endTime": {
+                  "segment_offset": 165807,
+                  "segment_offset_sec": 5532.436763,
+                  "segment_offset_tc": "01:32:06:27"
+              }
+          },
+          "file": {
+              "startTime": {
+                  "segment_offset": 2999,
+                  "segment_offset_sec": 100.078609,
+                  "segment_offset_tc": "00:01:40:00"
+              },
+              "endTime": {
+                  "segment_offset": null,
+                  "segment_offset_sec": null,
+                  "segment_offset_tc": "00:00:00:00"
+              }
+          }
+      },
+      "uploaded_start": "2025-03-31T20:16:08.801Z",
+      "uploaded_by": "someone",
+      "uploaded_in": 1,
+      "upload_speed": 0,
+      "processed_in": 0,
+      "interlaced": "True",
+      "tc_in": null,
+      "md5sum": "0",
+      "processed_md5sum": "0",
+      "metadata": {
+          "assetId": "NWR_MeetDave_Th_pt",
+          "programTitle": "Meet Dave",
+          "localizedTitle": "O Grande Dave",
+          "programType": "Movie",
+          "originalRelease": "07/11/2008",
+          "version": "Theatrical",
+          "duration": "90",
+          "localizedSynopsis": "Tripulação de aliens em miniatura opera uma nave espacial com forma humana.",
+          "cast": "Eddie Murphy, Eddie Murphy, Elizabeth Banks, Gabrielle Union, Scott Caan, Ed Helms, Kevin Hart, Mike O'Malley, Pat Kilbane, Judah Friedlander, Marc Blucas, Jim Turner, Austyn Lind Myers, Adam Tomei, Brian Huskey, Shawn Christian, Rob Moran, Jane Bradbury, Brad Wilson, Miguel A. Nunez, John Gatins, Nick Berman, Smith Cho, Yung-I Chang, David “Goldy” Goldsmith, Paul Scheer, James Michael Connor, Justin Robbins, Miles Robbins  Allisyn Ashley Arm, Stephanie Venditto, Richard Cerenzio, Jane Altman, Philip Pavel  Yvette Nicole Brown, Charlie Guardino, Craig Gellis, Tim Sitarz, Thomas Langston, John Mainieri, Phyllis Kay, Michael Izquierdo, Kristen Connolly, Monica Flores, Scott Levine  Boni Yanagisawa, Floyd Levine, Richie Allan, Alex Berg, Brandon Molale, Phaedra Nielson, Mel Cowan, Janine Edwards, Michael Winther, Asako Takasue, Abbey Lerman, Makoto Tanaka, Mark Rangel, Rashida Roy, Naked Cowboy, William Penick.",
+          "director": "Brian Robbins",
+          "ratingOrg": "SNJ",
+          "rating": "L",
+          "genre": "KIDS",
+          "licensor": "Twentieth Century Fox Film Corporation",
+          "contentRights": "Linear",
+          "winStart": "01/27/2016",
+          "winEnd": "05/31/2026",
+          "studio": "Twentieth Century Fox Film Studios",
+          "videoFormat": "HD",
+          "audioLanguage": "pt",
+          "createdAt": "2025-04-02T14:58:03.161Z",
+          "updatedAt": "2025-04-02T14:58:03.161Z",
+          "kidsDirected": "False"
+      },
+      "created_at": "2025-03-31T20:16:08.810Z",
+      "uploaded_at": "2025-03-31T20:16:08.801Z",
+      "updated_at": "2025-04-22T14:51:54.360Z",
+      "asset_id": "NWR_MeetDave_Th_pt",
+      "id": 6,
+      "type": "bumper",
+      "asset_type": "Video",
+      "category": "media",
+      "title": "O Grande Dave",
+      "state": "uploaded",
+      "duration": 101.26666666666667,
+      "resolution": "1920x1080",
+      "video_bit_rate": "51792976",
+      "processed_filename": "DEV/PROXY/NWR_MeetDave_Th_pt.mp4",
+      "preview_image": "https://samsung-ops-videos.s3.sa-east-1.amazonaws.com/DEV/THUMBNAIL/NWR_MeetDave_Th_pt.png",
+      "preview_video": "https://samsung-ops-videos.s3.sa-east-1.amazonaws.com/DEV/PROXY/NWR_MeetDave_Th_pt.mp4?AWSAccessKeyId=AKIARTIEGHQ7J3R7NV4W&Expires=1745516881&Signature=YOb7N8GY547yT0TV85X5PZsuC4c%3D",
+      "frame_frequency": "29.97",
+      "system_type": "c3po"
+  }
+}

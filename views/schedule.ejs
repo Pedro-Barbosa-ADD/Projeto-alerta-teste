@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetManager - Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/css/schedule.css" rel="stylesheet">
+    <script>
+        window.BACKEND_URL = '<%= BACKEND_URL %>';
+        window.AUTH_TOKEN = '<%= token %>';
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="/main">
+                <i class="bi bi-tv me-2"></i>
+                Asset Manager
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span class="nav-link">Bem-vindo, <%= user.name %></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="sidebar">
+            <div class="sidebar-header-select pt-2" id="sidebar-header-select">
+                <select class="form-select form-select-sm" aria-label="Small select example" id="customerSelect">
+                    <% customer?.forEach(function(c, index) { %>
+                        <option value="<%= c.customer_id %>" <%=index===0 ? 'selected' : '' %>><%= c.customer_name %>
+                        </option>
+                        <% }); %>
+                </select>
+            </div>
+            <div class="sidebar-header" id="sidebar-header">
+                <h6 class="text-white mb-0 ">Canais</h6>
+            </div>
+            <div class="channels-list" id="sidebar-channels-list">
+                <% if (channels && channels.length> 0) { %>
+                    <% channels.forEach(function(channel) { %>
+                        <div class="card channel-card" data-feed-id="<%= channel.feed_id %>">
+                            <% if (channel.detail && channel.detail.media && channel.detail.media.preview_image) { %>
+                                <img src="<%= channel.detail.media.preview_image.replace('_%s', '_384x216') %>"
+                                    class="card-img-top " alt="<%= channel.name %>">
+                                <% } else { %>
+                                    <div class="card-img-top  d-flex align-items-center justify-content-center"
+                                        style="height: 80px; background-color: black;">
+                                        <span class="text-white">
+                                            <%= channel.feed_code %>
+                                        </span>
+                                    </div>
+                                    <% } %>
+                                        <div class="card-body" data-user-id="<%= channel.name %>"
+                                            data-value="<%= channel.detail.live_url %>">
+                                            <p class="card-text">
+                                                <%= channel.name %>
+                                            </p>
+                                        </div>
+                        </div>
+                        <% }); %>
+                            <% } else { %>
+                                <div class="text-white">Nenhum canal disponível</div>
+                                <% } %>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="row content-header justify-content-between">
+                <div class="col-md-3 align-items-center">
+                    <h6 class="channel-name" id="selectedChannelName"></h6>
+                </div>
+                <div id='button-live' class="col-md-auto align-items-center">
+                    <button class="btn btn-outline-light btn-live">
+                        Live
+                    </button>
+                </div>
+            </div>
+
+            <div class="row content-search">
+                <div class="col-md-3 align-items-center">
+
+                </div>
+                <div class="col-md-auto align-items-center">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text">
+                            <i class="bi bi-calendar-event"></i>
+                        </span>
+                        <input type="date" class="form-control" id="calendarInput" name="calendar">
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-assets" id="content-assets">
+                <div class="row side-list">
+                    <div class="col-md-3 search-container">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" id="searchInput" placeholder="Pesquisar vídeos...">
+                            <button class="btn btn-primary" type="button" id="searchButton">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <div id="list-filters"></div>
+                    </div>
+
+                    <div class="col-md-3 list-content" id="list-content">
+                        <div class="asset-list list-view" id="assetList">
+                            <div class="asset-playlist-grid" id="assetGrid">
+                                <!-- Os assets serão inseridos aqui via JavaScript -->
+                            </div>
+                        </div>
+                        <div class="content-footer">
+                            <nav aria-label="Navegação de páginas">
+                                <ul class="pagination justify-content-center mb-0" id="pagination">
+                                    <!-- A paginação será inserida aqui via JavaScript -->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 list-content" id="list-content-playlist">
+                    <div class="asset-list list-view" id="assetList">
+                        <div class="col-md-9 asset-playlist-grid" id="playlistList">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/meetecho/janus-gateway/html/janus.js"></script>
+    <script src="/js/smpte-timcode.js"></script>
+    <script src="/js/schedulePage.js"></script>
+    <script src="/js/playJanus.js"></script>
+
+    <div id="overlay">
+        <div id="popup">
+            <button id="close-btn" onclick="closePopup()">X</button>
+            <video id="video" controls autoplay></video>
+        </div>
+    </div>
+</body>
+
+</html>

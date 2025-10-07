@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssetManager - Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <script>
+        window.BACKEND_URL = '<%= BACKEND_URL %>';
+        window.AUTH_TOKEN = '<%= token %>';
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="/main">
+                <i class="bi bi-tv me-2"></i>
+                Asset Manager
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span class="nav-link">Bem-vindo, <%= user.name %></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="customerSelectWrapper" style="margin-top: 50px; margin-left: 30px; max-width: 300px;"></div>
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 10px;">
+        <style>
+            .video-grid {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .video-grid video {
+                width: calc(25% - 10px);
+                /* 3 videos per row with some spacing */
+                height: auto;
+                margin-bottom: 10px;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/meetecho/janus-gateway/html/janus.js"></script>
+        <script src="/js/playJanus.js"></script>
+        <script src="/js/multiview.js"></script>
+    </div>
+</body>
+
+</html>

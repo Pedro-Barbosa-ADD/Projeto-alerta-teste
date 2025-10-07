@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Adrenalina Pura TV Halloween",
+    "feed_id": 1,
+    "feed_code": "tvapt",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {
+      "media": {
+        "title": "A Sereia: Lago dos Mortos",
+        "segment_id": 4,
+        "asset_id": "THEMERMAIDLAKEOFTHEDEAD_SOFA_20190416_2510-FTR_DUB_pt-BR",
+        "preview_image": "https://preview-amagicloud-sofa-automation-sofa.cloudport.amagi.tv/media/sofa/THEMERMAIDLAKEOFTHEDEAD_SOFA_20190416_2510-FTR_DUB_pt-BR/62522e0c0ca22b7b6349e4367b39aed9/thumbnail/THEMERMAIDLAKEOFTHEDEAD_SOFA_20190416_2510-FTR_DUB_pt-BR_%s.png"
+      },
+      "state": "media",
+      "id": 1,
+      "code": "tvapt_001",
+      "playout_type": "classic",
+      "name": null,
+      "live_url": "https://d1gl5ojlzl1vm6.cloudfront.net/SofaDigital/AdrenalinaPuraTerror/playlist.m3u8",
+      "pubsub_channel": "player|sofa_cloudport_amagi_tv|sofa|tvapt|tvapt_001",
+      "placement_id": ""
+    }
+  },
+  {
+    "name": "Adrenalina Pura TV POR",
+    "feed_id": 2,
+    "feed_code": "fzpor",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {
+      "media": {
+        "title": "Três Ladrões e um Bebê",
+        "segment_id": 2,
+        "asset_id": "ROBBHOOD_SOFA_20240308_4765-FTR_DUB_pt-BR",
+        "preview_image": "https://preview-amagicloud-sofa-automation-sofa.cloudport.amagi.tv/media/sofa/ROBBHOOD_SOFA_20240308_4765-FTR_DUB_pt-BR/1a2b0051d27508a99007f6a9b4e4a00a/thumbnail/ROBBHOOD_SOFA_20240308_4765-FTR_DUB_pt-BR_%s.png"
+      },
+      "state": "media",
+      "id": 2,
+      "code": "fzpor_001",
+      "playout_type": "classic",
+      "name": "Freezone-Por",
+      "live_url": "https://d1gl5ojlzl1vm6.cloudfront.net/SofaDigital/Freezone-Portuguese/240p-cc/index.m3u8",
+      "pubsub_channel": "player|sofa_cloudport_amagi_tv|sofa|fzpor|fzpor_001",
+      "placement_id": ""
+    }
+  },
+  {
+    "name": "Adrenalina Pura TV Spanish",
+    "feed_id": 3,
+    "feed_code": "frspa",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {
+      "media": {
+        "title": "Tres ladrones y un bebé",
+        "segment_id": 2,
+        "asset_id": "ROBBHOOD_SOFA_20240308_4765-FTR_DUB_es-419",
+        "preview_image": "https://preview-amagicloud-sofa-automation-sofa.cloudport.amagi.tv/media/sofa/ROBBHOOD_SOFA_20240308_4765-FTR_DUB_es-419/913109c9b423c74d5daf80cddaafad35/thumbnail/ROBBHOOD_SOFA_20240308_4765-FTR_DUB_es-419_%s.png"
+      },
+      "state": "media",
+      "id": 5,
+      "code": "frspa_001",
+      "playout_type": "classic",
+      "name": null,
+      "live_url": "https://d1gl5ojlzl1vm6.cloudfront.net/SofaDigital/Freezone-Spanish/240p-cc/index.m3u8",
+      "pubsub_channel": "player|sofa_cloudport_amagi_tv|sofa|frspa|frspa_001",
+      "placement_id": ""
+    }
+  },
+  {
+    "name": "Filmelier Portuguese",
+    "feed_id": 4,
+    "feed_code": "flmpor",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {
+      "media": {
+        "title": "A12_BREAK_FTV_JAN25_3_EG-PTBR",
+        "segment_id": 1,
+        "asset_id": "A12_BREAK_FTV_JAN25_3_EG-PTBR",
+        "preview_image": "https://preview-amagicloud-sofa-automation-sofa.cloudport.amagi.tv/media/sofa/A12_BREAK_FTV_JAN25_3_EG-PTBR/66b109393aef1fe80799b5eb821bf333/thumbnail/A12_BREAK_FTV_JAN25_3_EG-PTBR_%s.png"
+      },
+      "state": "media",
+      "id": 3,
+      "code": "flmpor_001",
+      "playout_type": "classic",
+      "name": "Freezone Portuguese",
+      "live_url": "https://d1gl5ojlzl1vm6.cloudfront.net/SofaDigital/Filmelier-Portuguese/240p-cc/index.m3u8",
+      "pubsub_channel": "player|sofa_cloudport_amagi_tv|sofa|flmpor|flmpor_001",
+      "placement_id": ""
+    }
+  },
+  {
+    "name": "Filmelier Spanish",
+    "feed_id": 5,
+    "feed_code": "flmspa",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {
+      "media": {
+        "title": "Albatros",
+        "segment_id": 5,
+        "asset_id": "ALBATROSS_SOFA_20250128_5162-FTR_DUB_es-419",
+        "preview_image": "https://preview-amagicloud-sofa-automation-sofa.cloudport.amagi.tv/media/sofa/ALBATROSS_SOFA_20250128_5162-FTR_DUB_es-419/50d3c0bc8939310ea3d26521c68949a1/thumbnail/ALBATROSS_SOFA_20250128_5162-FTR_DUB_es-419_%s.png"
+      },
+      "state": "media",
+      "id": 6,
+      "code": "flmspa_001",
+      "playout_type": "classic",
+      "name": null,
+      "live_url": "https://d1gl5ojlzl1vm6.cloudfront.net/SofaDigital/Filmelier-Spanish/240p-cc/index.m3u8",
+      "pubsub_channel": "player|sofa_cloudport_amagi_tv|sofa|flmspa|flmspa_001",
+      "placement_id": ""
+    }
+  },
+  {
+    "name": "Turma da Monica Portuguese",
+    "feed_id": 6,
+    "feed_code": "tdmpor",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {
+      "media": {
+        "title": "Cine Gibi 3: Planos Infalíveis",
+        "segment_id": 6,
+        "asset_id": "CINEGIBI3PLANOSINFALIVEIS_SOFA_20151008_0712-FTR",
+        "preview_image": "https://preview-amagicloud-sofa-automation-sofa.cloudport.amagi.tv/media/sofa/CINEGIBI3PLANOSINFALIVEIS_SOFA_20151008_0712-FTR/6b5244ba5c55c5354a0c939947a3c33d/thumbnail/CINEGIBI3PLANOSINFALIVEIS_SOFA_20151008_0712-FTR_%s.png"
+      },
+      "state": "media",
+      "id": 4,
+      "code": "tdmpor_001",
+      "playout_type": "classic",
+      "name": null,
+      "live_url": "https://d1gl5ojlzl1vm6.cloudfront.net/SofaDigital/Turma_da_Monica-Portuguese/240p-cc/index.m3u8",
+      "pubsub_channel": "player|sofa_cloudport_amagi_tv|sofa|tdmpor|tdmpor_001",
+      "placement_id": ""
+    }
+  },
+  {
+    "name": " Filmelier TV Esperança",
+    "feed_id": 7,
+    "feed_code": "espca",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {}
+  },
+  {
+    "name": "Filmelier TV  Esperanza",
+    "feed_id": 8,
+    "feed_code": "espza",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {}
+  },
+  {
+    "name": " Filmelier TV  Pasión",
+    "feed_id": 9,
+    "feed_code": "pasion",
+    "account_code": "sofa",
+    "fps": 29.97002997002997,
+    "timezone": "America/Sao_Paulo",
+    "broadcast_start_time": "06:00:00",
+    "detail": {}
+  }
+]

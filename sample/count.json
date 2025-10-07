@@ -1,0 +1,59 @@
+{
+  "feed": 1,
+  "category": "media",
+  "states": [
+    {
+      "state": "all",
+      "count": 1056
+    },
+    {
+      "state": "new",
+      "count": 0
+    },
+    {
+      "state": "transcoding",
+      "count": 1
+    },
+    {
+      "state": "uploading",
+      "count": 0
+    },
+    {
+      "state": "queued",
+      "count": 0
+    },
+    {
+      "state": "processing",
+      "count": 1
+    },
+    {
+      "state": "invalid",
+      "count": 20
+    },
+    {
+      "state": "qc_failed",
+      "count": 14
+    },
+    {
+      "state": "failed",
+      "count": 5
+    },
+    {
+      "state": "uploaded",
+      "count": 1015
+    },
+    {
+      "state": "archived",
+      "count": 0
+    },
+    {
+      "state": "deleted",
+      "count": 0
+    },
+    {
+      "state": "submitted",
+      "count": 0
+    }
+  ],
+  "pending_media_count": 0
+}

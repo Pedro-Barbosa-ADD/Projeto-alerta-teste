@@ -1,0 +1,38 @@
+[
+  {
+    "customer_id": 1,
+    "customer_name": "Sofá Digital",
+    "system_info": {
+      "system_type": "cloudport",
+      "playout_url": "https://sofa.cloudport.amagi.tv",
+      "playout_token": "X7hix6WcDjLyswQxyQrK"
+    }
+  },
+  {
+    "customer_id": 2,
+    "customer_name": "CazéTV",
+    "system_info": {
+      "system_type": "cloudport",
+      "playout_url": "https://livemode.cloudport.amagi.tv",
+      "playout_token": "cqREZSisaht3FKnbbxox"
+    }
+  },
+  {
+    "customer_id": 3,
+    "customer_name": "Jovem Pan",
+    "system_info": {
+      "system_type": "cloudport",
+      "playout_url": "https://jovempan.cloudport.amagi.tv/",
+      "playout_token": "pwfLxh_R6Y3FsaJ5wtk6"
+    }
+  },
+  {
+    "customer_id": 3,
+    "customer_name": "Samsung",
+    "system_info": {
+      "system_type": "C3PO",
+      "playout_url": "https://c3po.addigital.tv/",
+      "playout_token": "qwe123!@#"
+    }
+  }
+]
