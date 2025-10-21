@@ -126,6 +126,7 @@ body {
     text-align: center;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -241,6 +242,7 @@ body {
     margin-bottom: 8px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -325,9 +327,9 @@ body {
 /* Estilos para visualização em cards */
 .asset-list.cards-view .asset-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 5px;
+    padding:5px;
 }
 
 .asset-list.cards-view .asset-card {
@@ -363,6 +365,7 @@ body {
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -942,8 +945,8 @@ body {
 }
 
 #assetPlayer {
-    max-width: 480px;
-    width: 100%;
+    max-width: 240px;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -1229,4 +1232,84 @@ video {
     background-color: #343a40;
     color: white;
     border: none;
+}
+
+/* === GRADE DE VÍDEOS RETANGULARES RESPONSIVOS === */
+
+.video-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.video-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  gap: 4px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-content: center;
+
+  /* grade fluida, se adapta à tela */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Cada player */
+.channel-video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain; /* 🔁 Troca cover por contain */
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background-color: #000; /* Mantém o fundo preto para bordas */
+  transition: transform 0.15s ease;
+}
+
+
+.channel-video:hover {
+  transform: scale(1.02);
+  border-color: #0d6efd;
+}
+
+/* === RESPONSIVIDADE === */
+
+/* Monitores grandes */
+@media (min-width: 1600px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  }
+}
+
+/* Telas médias (laptops/tablets) */
+@media (max-width: 1200px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 900px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .channel-video {
+    aspect-ratio: 16 / 9;
+  }
 }

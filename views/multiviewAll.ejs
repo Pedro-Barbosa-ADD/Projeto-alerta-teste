@@ -34,40 +34,36 @@
                         <a class="nav-link" href="/logout">Sair</a>
                     </li>
                 </ul>
+                <div class="d-flex align-items-center">
+                    <button id="prevPage" class="btn btn-outline-light me-2">Previus</button>
+                    <span id="pageInfo" class="text-light me-2">Page 1</span>
+                    <button id="nextPage" class="btn btn-outline-light">Next</button>
+                </div>
             </div>
         </div>
     </nav>
-    <div id="customerSelectWrapper" style="margin-top: 50px; margin-left: 30px; max-width: 300px;"></div>
-    <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 10px;">
-        <style>
-            .video-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 90vh;
-            }
 
-            .video-grid {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                justify-content: space-around;
-                align-content: center;
-            }
-
-            .video-grid video {
-                width: calc(25% - 10px);
-                /* 4 videos per row with some spacing */
-                height: auto;
-                margin-bottom: 20px;
-            }
-        </style>
+    <div id="customerSelectWrapper" class="customer-select-wrapper"></div>
         <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
         <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/meetecho/janus-gateway/html/janus.js"></script>
         <script src="/js/playJanus.js"></script>
         <script src="/js/multiviewAll.js"></script>
     </div>
+
+    <style>
+
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(648px, 1fr));
+        gap: 10px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    </style>
+
 </body>
 
 </html>

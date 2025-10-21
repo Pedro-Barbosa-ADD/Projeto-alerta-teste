@@ -13,8 +13,32 @@ videoWrapper.appendChild(videoGrid);
 document.body.appendChild(videoWrapper);
 let selectedCustomerId = null
 
+let currentPage = 1;
+let itemsPerPage =  autoSelectItemsPerPage(); // Ajusta dinamicamente com base na largura da tela
+
+function autoSelectItemsPerPage() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 3840) { // 4K
+        return 20; // 5 colunas x 4 linhas
+    } else if (screenWidth >= 2560) { // 2K
+        return 16; // 4 colunas x 4 linhas
+    } else if (screenWidth >= 1920) { // Full HD
+        return 12; // 4 colunas x 3 linhas
+    } else if (screenWidth >= 1280) { // HD
+        return 8; // 4 colunas x 2 linhas
+    } else if (screenWidth >= 768) { // Tablets
+        return 6; // 3 colunas x 2 linhas
+    } else { // Mobile
+        return 4; // 2 colunas x 2 linhas
+    }
+}
+let allChannels = [];
+
 document.addEventListener('DOMContentLoaded', async () => {
-    mountViewer()
+    await mountViewer();
+    document.getElementById('prevPage').addEventListener('click', () => handlePagination('prev'));
+    document.getElementById('nextPage').addEventListener('click', () => handlePagination('next'));
 });
 
 async function handleCustomerChange(e) {
@@ -23,21 +47,28 @@ async function handleCustomerChange(e) {
 }
 
 async function mountViewer() {
-    let dataChannel = await requestCustomer()
-    dataChannel.forEach((channel, index) => {
+    await requestCustomer(); // populates allChannels
+    await loadPage(1);
+}
+
+async function loadPage(page) {
+    currentPage = page;
+    closeVideos();
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const channelsToLoad = allChannels.slice(start, end);
+    channelsToLoad.forEach((channel, index) => {
         if (channel.url) {
             const videoPlayer = document.createElement('video');
-            videoPlayer.width = 320;
-            videoPlayer.height = 240;
-            videoPlayer.style.border = '1px solid white';
+            videoPlayer.classList.add('channel-video');
             videoPlayer.controls = true;
             videoPlayer.autoplay = true;
             videoPlayer.muted = true;
-            videoPlayer.id = channel.customer_id + index
+            videoPlayer.id = channel.customer_id + index + 'page' + page;
             videoGrid.appendChild(videoPlayer);
             console.log(channel.url)
             if (channel.url.includes("/janus")) {
-                initJanus(channel.url, 1, channel.customer_id + index)
+                initJanus(channel.url, 1, channel.customer_id + index + 'page' + page)
             } else {
                 if (Hls.isSupported()) {
                     const hls = new Hls();
@@ -55,8 +86,13 @@ async function mountViewer() {
             }
         }
     });
+    // Update page info
+    const pageInfo = document.getElementById('pageInfo');
+    if (pageInfo) {
+        const totalPages = Math.ceil(allChannels.length / itemsPerPage);
+        pageInfo.textContent = `Page ${page} of ${totalPages}`;
+    }
 }
-
 
 async function closeVideos() {
     const videos = videoGrid.querySelectorAll('video');
@@ -98,7 +134,7 @@ async function requestCustomer() {
 }
 
 async function fetchAllCustomerUrls(customers) {
-    const allUrls = [];
+    allChannels = [];
 
     for (const customer of customers) {
         try {
@@ -110,7 +146,7 @@ async function fetchAllCustomerUrls(customers) {
             const data = await response.json();
             // Suponha que o retorno seja { urls: [ 'url1', 'url2' ] }
             data.forEach(channel => {
-                allUrls.push({
+                allChannels.push({
                     customer_id: customer.customer_id,
                     customer_name: customer.customer_name,
                     channel_name: channel.name,
@@ -122,5 +158,20 @@ async function fetchAllCustomerUrls(customers) {
             console.error(`Erro ao buscar URLs do cliente ${customer.customer_id}:`, err);
         }
     }
-    return allUrls;
+    return allChannels;
+}
+
+async function handlePagination(direction) {
+    let newPage = currentPage;
+    if (direction === 'prev' && currentPage > 1) {
+        newPage = currentPage - 1;
+    } else if (direction === 'next') {
+        const totalPages = Math.ceil(allChannels.length / itemsPerPage);
+        if (currentPage < totalPages) {
+            newPage = currentPage + 1;
+        }
+    }
+    if (newPage !== currentPage) {
+        await loadPage(newPage);
+    }
 }

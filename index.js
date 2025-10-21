@@ -319,35 +319,19 @@ app.get('/config', authenticateToken, async (req, res) => {
 
 app.get('/dashboard', authenticateToken, async (req, res) => {
   try {
-    // Obter lista de clientes usando o token do backend
-
-    res.render('dashboard', {
-      user: {
-        token: req.cookies.token,
-        name: req.cookies.name
-      },
-      token: req.cookies.token // Passando o token do backend remoto
-    });
+    res.render('monitorView', { videoUrl: monitorConfig[0] || '', user: { token: req.cookies.token, name: req.cookies.name }, token: req.cookies.token });
   } catch (error) {
     console.error('Erro ao carregar dados:', error);
     if (error.response && error.response.status === 401) {
       res.clearCookie('token');
       return res.redirect('/login');
     }
-    res.render('dashboard', {
-      user: {
-        token: req.cookies.token,
-        name: null
-      },
-      customer: null,
-      token: req.cookies.token
-    });
+    res.render('monitorView', { videoUrl: '', user: { token: req.cookies.token, name: null }, token: req.cookies.token });
   }
 });
-
-// Endpoint para consultar dados dos feeds
 app.get('/now_playing', async (req, res) => {
   const { customer_id } = req.query;
+      res.render('monitorView', { videoUrl: monitorConfig[3] || '', user: { token: req.cookies.token, name: req.cookies.name }, token: req.cookies.token });
 
   if (!customer_id) {
     return res.status(400).json({ error: 'O parâmetro customer_id é obrigatório.' });
@@ -379,6 +363,74 @@ app.get('/now_playing', async (req, res) => {
     });
   }
 });
+
+app.get('/monitor-config', authenticateToken, async (req, res) => {
+  try {
+    // Obtenha lista de clientes e canais como nas outras rotas
+    const customersResponse = await axios.get(`${process.env.BACKEND_URL}/api/customers`, {
+      headers: { 'Authorization': `Bearer ${req.cookies.token}` }
+    });
+    const customerInfo = customersResponse.data.map(c => ({
+      customer_id: c._id,
+      customer_name: c.customer_name
+    }));
+    // Pegue canais do primeiro cliente (ou todos)
+    const feedsResponse = await axios.get(`${process.env.BACKEND_URL}/api/customers?customer_id=${customerInfo[0].customer_id}`, {
+      headers: { 'Authorization': `Bearer ${req.cookies.token}` }
+    });
+    res.render('monitorConfig', {
+      user: { token: req.cookies.token, name: req.cookies.name },
+      customer: customerInfo,
+      channels: feedsResponse.data,
+      token: req.cookies.token
+    });
+  } catch (error) {
+    res.render('monitorConfig', { user: { token: req.cookies.token, name: null }, customer: null, channels: [], token: req.cookies.token });
+  }
+});
+
+let monitorConfig = [];
+
+app.post('/set-monitors', express.json(), authenticateToken, (req, res) => {
+  const userPermittedChannels = getUserPermittedChannels(req.user);
+  const requestedChannels = req.body.monitors;
+  const allValid = requestedChannels.every(url =>
+    userPermittedChannels.some(channel => channel.detail.live_url === url)
+  );
+  if (!allValid) {
+    return res.status(403).json({ error: 'Canal não permitido para este usuário.' });
+  }
+  monitorConfig = requestedChannels;
+  res.json({ success: true });
+});
+
+app.get('/monitor', authenticateToken, (req, res) => {
+  try {
+
+    res.render('multiviewAll', {
+      user: {
+        token: req.cookies.token,
+        name: req.cookies.name
+      },
+      token: req.cookies.token // Passando o token do backend remoto
+    });
+  } catch (error) {
+    console.error('Erro ao carregar dados:', error);
+    if (error.response && error.response.status === 401) {
+      res.clearCookie('token');
+      return res.redirect('/login');
+    }
+    res.render('multiviewAll', {
+      user: {
+        token: req.cookies.token,
+        name: null
+      },
+      customer: null,
+      token: req.cookies.token
+    });
+  }
+});
+
 
 // Endpoint para consultar feeds
 //app.get('/feeds', authenticateToken, checkConfig, async (req, res) => {
